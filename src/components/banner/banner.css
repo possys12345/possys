@@ -1,0 +1,5 @@
+.banner-img {
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh);
+}

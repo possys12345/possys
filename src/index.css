@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Graphik, Helvetica, sans-serif;
+  background-color: #e6e5e5;
+}

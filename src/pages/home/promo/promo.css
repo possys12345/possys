@@ -1,0 +1,16 @@
+.promo-wrp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.promo-wrp img {
+  display: flex;
+  width: 100%;
+}
+.image-section {
+  flex: 1;
+}
+.text-section {
+  flex: 1;
+}
