@@ -1,0 +1,6 @@
+.hero-card-wrp {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2%;
+}

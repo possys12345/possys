@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 interface MenuNavProps {
   typeNaver: "leftNav" | "rightNav";
 }
@@ -13,8 +14,8 @@ export default function MenuNav({ typeNaver }: MenuNavProps) {
   ];
 
   let rightNavArr = [
-    { path: "/", label: "Shop systems" },
-    { path: "/pricing", label: "Pricing" },
+    { path: "/", label: "Home" },
+    { path: "/product", label: "Product" },
     { path: "/about", label: "About" },
     { path: "/helpcenter", label: " Help Center" },
     { path: "/login", label: "  Log In" },
@@ -23,9 +24,9 @@ export default function MenuNav({ typeNaver }: MenuNavProps) {
     return (
       <>
         {leftNavArr.map((item) => (
-          <a className="menu-item" href={item.path}>
+          <Link to={item.path} className="menu-item">
             {item.label}
-          </a>
+          </Link>
         ))}
       </>
     );

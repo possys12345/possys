@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./logo/logo";
 import "./navigation.css";
 import { Link } from "react-router-dom";
 import MenuNav from "./menu-nav";
-import Cart from "./cart/cart";
-export const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+import { Cart } from "../../pages/product/products/cart/cart";
+import { CartItem } from "../../pages/product/products/types";
+import { ShoppingCart } from "lucide-react";
 
+export const Navigation: React.FC = () => {
   return (
     <nav className="topNav">
       <div className="leftNav ">
@@ -18,7 +19,10 @@ export const Navigation: React.FC = () => {
         <Link className="get-start-btn" to="/contact">
           Contact sales
         </Link>
-        <Cart />
+        {/* 
+        <button className="cart-button">
+          <ShoppingCart size={24} />
+        </button> */}
       </div>
     </nav>
   );
