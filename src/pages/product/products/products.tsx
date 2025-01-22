@@ -25,12 +25,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         />
       </div>
       <div className="product-content">
-        <div>
+        <div className="product-content-text">
           <h3 className="product-title">{product.title}</h3>
           <p className="product-description">{product.description}</p>
+          <span className="product-price">${product.price.toFixed(2)}</span>
         </div>
         <div className="product-footer">
-          <span className="product-price">${product.price.toFixed(2)}</span>
           {!cartItem ? (
             <button
               onClick={() => onAddToCart(product)}

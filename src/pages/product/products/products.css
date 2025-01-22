@@ -106,11 +106,20 @@ body {
   object-fit: cover;
 }
 
-.product-content {
-  width: 70%;
+.product-content-text {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
+}
+.product-content {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px 10px;
+  flex: 1;
 }
 
 .product-title {
@@ -121,7 +130,6 @@ body {
 
 .product-description {
   color: #4b5563;
-  margin-top: 0.5rem;
   font-size: 0.875rem;
 }
 
@@ -133,6 +141,7 @@ body {
 }
 
 .product-price {
+  margin-top: 10px;
   font-size: 12px;
   font-weight: bold;
   color: #111827;
