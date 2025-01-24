@@ -306,3 +306,6 @@ body {
 .checkout-button:hover {
   background-color: #1d4ed8;
 }
+.product-header {
+  margin-bottom: 30px;
+}

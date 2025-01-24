@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { productsData } from "./products/products-data";
 import { ProductCard } from "./products/products";
 import { CartItem, ProductTy } from "./products/types";
+import { ShoppingCart } from "lucide-react";
+import { Cart } from "./products/cart/cart";
 
 export default function Product() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -26,6 +28,15 @@ export default function Product() {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   return (
     <div>
+      <header className="product-header">
+        <div className="container header-content">
+          <h1 className="store-title">Premium Store</h1>
+          <button onClick={() => setIsCartOpen(true)} className="cart-button">
+            <ShoppingCart size={24} />
+            {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+          </button>
+        </div>
+      </header>
       <div className="products-list">
         {productsData.map((product) => (
           <ProductCard
@@ -37,6 +48,17 @@ export default function Product() {
           />
         ))}
       </div>
+
+      {isCartOpen && (
+        <>
+          <div className="cart-overlay" onClick={() => setIsCartOpen(false)} />
+          <Cart
+            items={cartItems}
+            onUpdateQuantity={handleUpdateQuantity}
+            onClose={() => setIsCartOpen(false)}
+          />
+        </>
+      )}
     </div>
   );
 }
